@@ -10,7 +10,7 @@ package org.firstinspires.ftc.teamcode;
 @Disabled
 public class TheClaw extends LinearOpMode {
 
-    private Servo foundationclamp1;
+
     private Servo wrist;
     private Servo THECLAW;
 
@@ -19,7 +19,7 @@ public class TheClaw extends LinearOpMode {
      */
     @Override
     public void runOpMode() {
-        foundationclamp1 = hardwareMap.servo.get("foundation clamp1");
+
         wrist = hardwareMap.servo.get("wrist");
         THECLAW = hardwareMap.servo.get("THE CLAW");
 
@@ -29,11 +29,6 @@ public class TheClaw extends LinearOpMode {
             // Put run blocks here.
             while (opModeIsActive()) {
                 // Put loop blocks here.
-                if (gamepad2.a == true) {
-                    foundationclamp1.setPosition(0.25);
-                } else if (gamepad2.b == true) {
-                    foundationclamp1.setPosition(0);
-                }
                 if (gamepad2.left_bumper == true) {
                     wrist.setPosition(0.25);
                 } else {

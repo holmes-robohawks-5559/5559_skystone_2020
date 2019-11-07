@@ -13,7 +13,6 @@ public class TeleopPractice extends LinearOpMode {
     private DcMotor leftFrontDT;
     private DcMotor rightBackDT;
     private DcMotor rightFrontDT;
-    private Servo foundationclamp1;
 
     /**
      * This function is executed when this Op Mode is selected from the Driver Station.
@@ -26,7 +25,6 @@ public class TeleopPractice extends LinearOpMode {
         leftFrontDT = hardwareMap.dcMotor.get("leftFrontDT");
         rightBackDT = hardwareMap.dcMotor.get("rightBackDT");
         rightFrontDT = hardwareMap.dcMotor.get("rightFrontDT");
-        foundationclamp1 = hardwareMap.servo.get("foundation clamp1");
 
         // Put initialization blocks here.
         leftBackDT.setDirection(DcMotorSimple.Direction.REVERSE);
@@ -34,17 +32,7 @@ public class TeleopPractice extends LinearOpMode {
         rightBackDT.setDirection(DcMotorSimple.Direction.REVERSE);
         rightFrontDT.setDirection(DcMotorSimple.Direction.REVERSE);
         waitForStart();
-        if (opModeIsActive()) {
-            // Put loop blocks here.
-            if (gamepad1.a == true) {
-                foundationclamp1.setPosition(0);
-            } else if ((gamepad1.x && gamepad1.b) == true) {
-                foundationclamp1.setPosition(0.5);
-            } else if (gamepad1.b == true) {
-                foundationclamp1.setPosition(1);
-            } else {
-                foundationclamp1.setPosition(0.5);
-            }
+
             while (opModeIsActive()) {
                 // Put loop blocks here.
                 tgtPower = -gamepad1.left_stick_y;
@@ -71,4 +59,4 @@ public class TeleopPractice extends LinearOpMode {
             }
         }
     }
-}
+
