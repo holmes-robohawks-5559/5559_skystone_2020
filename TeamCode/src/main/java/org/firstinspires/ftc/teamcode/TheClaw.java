@@ -30,15 +30,15 @@ public class TheClaw extends LinearOpMode {
             while (opModeIsActive()) {
                 // Put loop blocks here.
                 if (gamepad2.left_bumper == true) {
-                    wrist.setPosition(0.25);
+                    wrist.setPosition(1);
                 } else {
                     wrist.setPosition(0);
                 }
                 telemetry.update();
-                if (gamepad2.b) {
+                if (gamepad2.a) {
                     THECLAW.setPosition(0);
                 }
-                if (gamepad2.left_bumper) {
+                if (gamepad2.b) {
                     THECLAW.setPosition(1);
                 }
             }
