@@ -7,6 +7,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
 
 @TeleOp(name = "simpleauton (Blocks to Java)", group = "")
+@Disabled
 public class Atonomous extends LinearOpMode {
 
     private DcMotor leftBackDT;
