@@ -26,7 +26,9 @@ public class AutonBasicBlue extends LinearOpMode {
         leftFrontDT = hardwareMap.dcMotor.get("leftFrontDT");
         rightFrontDT = hardwareMap.dcMotor.get("rightFrontDT");
         RightBackDT = hardwareMap.dcMotor.get("rightBackDT");
-        THECLAW = hardwareMap.servo.get("claw");
+
+        THECLAW = hardwareMap.servo.get("THE CLAW");
+
 
         // Put initialization blocks here.
         leftBackDT.setDirection(DcMotorSimple.Direction.REVERSE);
