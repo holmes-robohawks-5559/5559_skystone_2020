@@ -27,7 +27,7 @@ public class AutonBasicBlue extends LinearOpMode {
         rightFrontDT = hardwareMap.dcMotor.get("rightFrontDT");
         RightBackDT = hardwareMap.dcMotor.get("rightBackDT");
 
-        THECLAW = hardwareMap.servo.get("THE CLAW");
+        THECLAW = hardwareMap.servo.get("claw");
 
 
         // Put initialization blocks here.
