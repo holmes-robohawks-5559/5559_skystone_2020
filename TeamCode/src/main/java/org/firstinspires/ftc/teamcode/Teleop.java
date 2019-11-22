@@ -101,6 +101,8 @@ public class Teleop extends OpMode {
             magnitude *= 0.3f;
         } else if (!(gamepad1.right_trigger > 0.1f)) {
             magnitude *= 0.7f;
+        } else{
+            magnitude *=0.5f;
         }
 
         double robotAngle = Math.atan2(gamepad1.left_stick_y, gamepad1.left_stick_x) - Math.PI / 4;

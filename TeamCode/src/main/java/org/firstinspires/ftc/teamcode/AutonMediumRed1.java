@@ -26,10 +26,10 @@ public class AutonMediumRed1 extends LinearOpMode {
         leftBackDT = hardwareMap.dcMotor.get("leftBackDT");
         leftFrontDT = hardwareMap.dcMotor.get("leftFrontDT");
         rightFrontDT = hardwareMap.dcMotor.get("rightFrontDT");
-        RightBackDT = hardwareMap.dcMotor.get("RightBackDT");
-        THECLAW = hardwareMap.servo.get("THE CLAW");
-        foundationclamp1 = hardwareMap.servo.get("foundation clamp1");
-        foundationclamp2 = hardwareMap.servo.get("foundation clamp2");
+        RightBackDT = hardwareMap.dcMotor.get("rightBackDT");
+        THECLAW = hardwareMap.servo.get("claw");
+        foundationclamp1 = hardwareMap.servo.get("clamp1");
+        foundationclamp2 = hardwareMap.servo.get("clamp2");
 
         // Put initialization blocks here.
         leftBackDT.setDirection(DcMotorSimple.Direction.REVERSE);
@@ -61,6 +61,11 @@ public class AutonMediumRed1 extends LinearOpMode {
                 rightFrontDT.setPower(-0.8);
                 sleep(1000);
                 strafeLeft(1, 1);
+                leftBackDT.setPower(-0);
+                RightBackDT.setPower(-0);
+                leftFrontDT.setPower(-0);
+                rightFrontDT.setPower(-0);
+                sleep(90002);
             }
         }
     }

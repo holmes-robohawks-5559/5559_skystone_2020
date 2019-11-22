@@ -6,13 +6,14 @@ package org.firstinspires.ftc.teamcode;
         import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
         import com.qualcomm.robotcore.hardware.Servo;
 
+
 @TeleOp(name = "TheClaw (Blocks to Java)", group = "")
 @Disabled
 public class TheClaw extends LinearOpMode {
 
 
     private Servo wrist;
-    private Servo THECLAW;
+    private Servo claw;
 
     /**
      * This function is executed when this Op Mode is selected from the Driver Station.
@@ -21,7 +22,7 @@ public class TheClaw extends LinearOpMode {
     public void runOpMode() {
 
         wrist = hardwareMap.servo.get("wrist");
-        THECLAW = hardwareMap.servo.get("THE CLAW");
+        claw = hardwareMap.servo.get("THE CLAW");
 
         // Put initialization blocks here.
         waitForStart();
@@ -35,9 +36,9 @@ public class TheClaw extends LinearOpMode {
                     wrist.setPosition(0);
                 }
                 if (gamepad2.a) {
-                    THECLAW.setPosition(0);
+                    claw.setPosition(0);
                 } else if (gamepad2.b) {
-                    THECLAW.setPosition(1);
+                    claw.setPosition(1);
                 }
                 telemetry.update();
             }
